@@ -12,7 +12,7 @@ export default function Footer() {
         <footer className="mt-10 p-10 md:px-36 text-white bg-gray-800">
             <div>
                 <div className="md:columns-3 space-y-5 md:space-y-0">
-                    <div className="flex items-center gap-2">
+                    <div className="flex justify-center items-center gap-2">
                         <div className="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center">
                             <HiOutlineMail className="text-3xl" />
                         </div>
@@ -21,7 +21,7 @@ export default function Footer() {
                             <p className="text-base">prathameshchaudhary7122@gmail.com</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex justify-center items-center gap-2">
                         <div className="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center">
                             <FaPhoneAlt className="text-2xl" />
                         </div>
@@ -30,7 +30,7 @@ export default function Footer() {
                             <p className="text-base">+91 9284240426</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex justify-center items-center gap-2">
                         <div className="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center">
                             <FaLocationDot className="text-2xl" />
                         </div>
