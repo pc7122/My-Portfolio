@@ -22,9 +22,12 @@ export default function Skills() {
 
     const alsoKnown = [
         { name: "jQuery", path: "jquery-icon.png" },
-        { name: "MongoDB", path: "mongodb-icon.svg" },
+        { name: "Tailwind", path: "tailwindcss-icon.svg" },
+        { name: "NextJS", path: "nextjs-icon.png" },
         { name: "MySQL", path: "mysql-icon.svg" },
+        { name: "MongoDB", path: "mongodb-icon.svg" },
         { name: "Tensorflow", path: "tensorflow-icon.svg" },
+        { name: "OpenCV", path: "opencv-icon.svg" },
         { name: "Git", path: "git-icon.svg" },
     ]
 
