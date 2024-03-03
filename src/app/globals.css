@@ -2,32 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  body {
+    @apply dark:bg-black bg-white;
+  }
+
+  .title {
+    @apply relative text-3xl font-extrabold leading-tight text-gray-950 dark:text-white w-min mb-10;
+  }
+
+  .section-title {
+    @apply relative text-4xl font-extrabold leading-tight text-gray-950 dark:text-white w-min mb-5;
+    @apply before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-yellow-400;
+  }
+
+  .section-desc {
+    @apply text-lg font-semibold text-black dark:text-gray-400 text-justify leading-tight tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-2xl font-semibold text-gray-950 dark:text-white mb-5;
+  }
+
+  .bebas {
+    font-family: var(--font-bebas);
+  }
+
+  .roboto {
+    font-family: var(--font-roboto);
+  }
+}
+
+@keyframes bottomUpAnimation {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animated-role span {
+  display: block;
+  opacity: 0;
+  -webkit-animation: bottomUpAnimation 6s ease-in-out infinite;
+  animation: bottomUpAnimation 6s ease-in-out infinite;
+}
+
+.animated-role span:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.animated-role span:nth-child(2) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.animated-role span:nth-child(3) {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.timeline {
+  height: 20rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .timeline {
+    height: auto;
+  }
+}
+
+html {
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(250, 204, 21) white;
 }
