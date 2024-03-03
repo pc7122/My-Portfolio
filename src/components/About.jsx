@@ -81,8 +81,8 @@ export default function About() {
                                 </div>
                             </div>
                             <div className="text-justify text-gray-950 dark:text-gray-500 mt-4 space-y-6">
-                                <p className="text-lg">As a web developer, I have extensive experience in designing, developing and maintaining websites and web applications. I have a strong understanding of HTML, CSS, JavaScript and various front-end frameworks such as React and Angular. I have also worked with various back-end technologies such as Node.js, PHP and Ruby on Rails to build dynamic and responsive websites. I have a good understanding of database systems such as MySQL, MongoDB and have experience in integrating databases with web applications. I have experience with version control systems such as Git and have collaborated on several projects using Git.</p>
-                                <p className="text-lg">I am a quick learner and highly motivated to apply my knowledge and skills to tackle complex problems. I am always eager to learn and grow as a professional developer.</p>
+                                <p className="text-lg leading-normal tracking-normal">As a web developer, I have extensive experience in designing, developing and maintaining websites and web applications. I have a strong understanding of HTML, CSS, JavaScript and various front-end frameworks such as React and Angular. I have also worked with various back-end technologies such as Node.js, PHP and Ruby on Rails to build dynamic and responsive websites. I have a good understanding of database systems such as MySQL, MongoDB and have experience in integrating databases with web applications. I have experience with version control systems such as Git and have collaborated on several projects using Git.</p>
+                                <p className="text-lg leading-normal tracking-normal">I am a quick learner and highly motivated to apply my knowledge and skills to tackle complex problems. I am always eager to learn and grow as a professional developer.</p>
                             </div>
                         </div>
                     </div>
@@ -96,10 +96,10 @@ export default function About() {
                                 <div key={index} className="timeline relative before:absolute before:top-0 before:left-0 before:h-full before:w-1 before:bg-gray-600 before:-translate-x-1/2">
                                     <div className="p-5 pr-0 m-0">
                                         <div className="absolute top-0 left-0 w-10 h-10 bg-gray-600 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                                        <div className="text-white space-y-2">
+                                        <div className="text-black dark:text-white space-y-2">
                                             <h3 className="text-2xl font-bold">{exp.title}</h3>
                                             <h4 className="text-lg font-bold text-yellow-400">{exp.company}</h4>
-                                            <p className="bg-white rounded text-black font-bold px-1 w-fit">{exp.date}</p>
+                                            <p className="bg-gray-950 dark:bg-white rounded text-white dark:text-black font-bold px-1 w-fit">{exp.date}</p>
                                             <ul className="text-justify list-disc ml-5">
                                                 {exp.desc.map((desc, index) => (
                                                     <li key={index}>{desc}</li>
@@ -119,13 +119,13 @@ export default function About() {
                                 <div key={index} className="timeline relative before:absolute before:top-0 before:left-0 before:h-full before:w-1 before:bg-gray-600 before:-translate-x-1/2">
                                     <div className="p-5 pr-0 m-0">
                                         <div className="absolute top-0 left-0 w-10 h-10 bg-gray-600 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                                        <div className="text-white space-y-2">
+                                        <div className="text-black dark:text-white space-y-2">
                                             <h3 className="text-2xl font-bold">
                                                 {edu.title}
                                                 {edu.major && <span className="block md:inline"> ({edu.major})</span>}
                                             </h3>
                                             <h4 className="text-lg font-bold text-yellow-400">{edu.institute}</h4>
-                                            <p className="bg-white rounded text-black font-bold px-1 w-fit">{edu.date}</p>
+                                            <p className="bg-gray-950 dark:bg-white rounded text-white dark:text-black font-bold px-1 w-fit">{edu.date}</p>
                                         </div>
                                     </div>
                                 </div>

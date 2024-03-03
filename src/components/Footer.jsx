@@ -12,7 +12,7 @@ export default function Footer() {
         <footer className="mt-10 p-10 md:px-36 text-white bg-gray-800">
             <div>
                 <div className="md:columns-3 space-y-5 md:space-y-0">
-                    <div className="flex justify-center items-center gap-2">
+                    <div className="flex md:justify-center items-center gap-2">
                         <div className="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center">
                             <HiOutlineMail className="text-3xl" />
                         </div>
@@ -21,7 +21,7 @@ export default function Footer() {
                             <p className="text-base">prathameshchaudhary7122@gmail.com</p>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center gap-2">
+                    <div className="flex md:justify-center items-center gap-2">
                         <div className="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center">
                             <FaPhoneAlt className="text-2xl" />
                         </div>
@@ -30,7 +30,7 @@ export default function Footer() {
                             <p className="text-base">+91 9284240426</p>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center gap-2">
+                    <div className="flex md:justify-center items-center gap-2">
                         <div className="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center">
                             <FaLocationDot className="text-2xl" />
                         </div>
@@ -47,7 +47,7 @@ export default function Footer() {
                     </div>
                     <div className="flex gap-4 mt-10">
                         <div className="w-12 h-12 rounded-full flex justify-center items-center bg-[#a81784] text-white">
-                            <a href="https://www.instagram.com/prathamesh_7122/" target="_blank" rel="noreferrer" className="text-3xl mx-2">
+                            <a href="https://www.instagram.com/pratham__7122/" target="_blank" rel="noreferrer" className="text-3xl mx-2">
                                 <FaInstagram className="text-2xl" />
                             </a>
                         </div>
@@ -57,12 +57,12 @@ export default function Footer() {
                             </a>
                         </div>
                         <div className="w-12 h-12 rounded-full flex justify-center items-center bg-blue-700 text-white">
-                            <a href="https://www.instagram.com/prathamesh_7122/" target="_blank" rel="noreferrer" className="text-3xl mx-2">
+                            <a href="https://www.linkedin.com/in/prathamesh-chaudhary-3ba554218/" target="_blank" rel="noreferrer" className="text-3xl mx-2">
                                 <FaLinkedinIn className="text-2xl" />
                             </a>
                         </div>
                         <div className="w-12 h-12 rounded-full flex justify-center items-center bg-black text-white">
-                            <a href="https://www.instagram.com/prathamesh_7122/" target="_blank" rel="noreferrer" className="text-3xl mx-2">
+                            <a href="https://github.com/pc7122" target="_blank" rel="noreferrer" className="text-3xl mx-2">
                                 <FaGithub className="text-2xl" />
                             </a>
                         </div>

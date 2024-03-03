@@ -21,7 +21,7 @@ export default function Skills() {
     }
 
     const alsoKnown = [
-        { name: "Jquery", path: "jquery-icon.png" },
+        { name: "jQuery", path: "jquery-icon.png" },
         { name: "MongoDB", path: "mongodb-icon.svg" },
         { name: "MySQL", path: "mysql-icon.svg" },
         { name: "Tensorflow", path: "tensorflow-icon.svg" },
@@ -38,7 +38,7 @@ export default function Skills() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
                         {
                             skills.programming.map((skill, index) => (
-                                <div key={index} className="column text-white">
+                                <div key={index} className="column text-black dark:text-white">
                                     <div>
                                         <div className="text-base font-bold uppercase">
                                             {skill.name}
@@ -60,7 +60,7 @@ export default function Skills() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
                         {
                             skills.web.map((skill, index) => (
-                                <div key={index} className="column text-white md:mt-10">
+                                <div key={index} className="column text-black dark:text-white md:mt-10">
                                     <div>
                                         <div className="text-base font-bold uppercase">
                                             {skill.name}
@@ -90,7 +90,7 @@ export default function Skills() {
                             alsoKnown.map((icon, index) => (
                                 <div key={index}>
                                     <Image key={index} src={`/icons/${icon.path}`} alt={icon.name} width={50} height={50} className="mx-auto" />
-                                    <span className="block text-white text-sm font-semibold mt-2 text-center">{icon.name}</span>
+                                    <span className="block text-black dark:text-white text-sm font-semibold mt-2 text-center">{icon.name}</span>
                                 </div>
                             ))
                         }
