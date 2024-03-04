@@ -109,3 +109,43 @@ html {
   scrollbar-width: thin;
   scrollbar-color: rgb(250, 204, 21) white;
 }
+
+@keyframes overBorder1 {
+  0% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+  50% {
+    left: 0;
+    top: 0;
+    transform: translateX(0);
+  }
+  100% {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes overBorder2 {
+  0% {
+    right: 100%;
+    transform: translateX(100%);
+  }
+  50% {
+    right: 0;
+    bottom: 0;
+    transform: translateX(0);
+  }
+  100% {
+    bottom: 100%;
+    transform: translateY(100%);
+  }
+}
+
+.circle:nth-child(1) {
+  animation: overBorder1 3s infinite;
+}
+
+.circle:nth-child(2) {
+  animation: overBorder2 3s infinite;
+}

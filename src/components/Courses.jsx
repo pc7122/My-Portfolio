@@ -30,7 +30,7 @@ const courses = [
 
 function Modal(props) {
     return (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 flex justify-center items-center" onClick={() => props.fun(-1)}>
+        <div className="hidden fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 md:flex justify-center items-center" onClick={() => props.fun(-1)}>
             <div className="modal w-[90%] md:w-[50%] p-5 rounded-lg">
                 <div className="flex justify-between items-center">
                     <h1 className="text-2xl font-bold text-white mx-auto">

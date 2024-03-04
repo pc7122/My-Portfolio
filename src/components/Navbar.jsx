@@ -25,8 +25,8 @@ export default function Header() {
                         <h1 className="text-2xl font-bold leading-tight text-yellow-400">My Port<span className="text-gray-900 dark:text-white">folio</span></h1>
                     </div>
 
-                    <nav className={`absolute md:static left-0 top-[6rem] md:top-0 w-full md:w-fit flex justify-center bg-white dark:bg-black transition-all md:translate-y-0 md:scale-y-100 ${showNav ? 'translate-y-0 scale-y-100' : '-translate-y-1/2 scale-y-0'}`} >
-                        <ul className="flex md:flex-row flex-col text-center gap-4 md:gap-8 leading-normal pb-10 md:pb-0">
+                    <nav className={`absolute md:static left-0 top-[5rem] md:top-0 w-full md:w-fit flex justify-center bg-white dark:bg-black transition-all md:translate-y-0 md:scale-y-100 ${showNav ? 'translate-y-0 scale-y-100' : '-translate-y-1/2 scale-y-0'}`} >
+                        <ul className="flex md:flex-row flex-col text-center gap-6 md:gap-8 leading-normal pb-10 md:pb-0">
                             {navItems.map((item, index) => (
                                 <li key={index} className="overflow-hidden">
                                     <Link href={item.link} className="dark:text-gray-300 text-base font-bold">
