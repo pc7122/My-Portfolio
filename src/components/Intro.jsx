@@ -16,7 +16,9 @@ export default function Intro() {
                         </div>
                     </h1>
                     <p className="text-lg text-gray-950 dark:text-gray-300">Building a successful product is a challenge. I am highly energetic in development.</p>
-                    <button className="bg-gray-300 hover:dark:bg-black hover:bg-white text-gray-800 hover:text-yellow-400 shadow transition-all px-4 py-2 rounded-xl font-bold mt-4">Get My Resume</button>
+                    <a href="/Prathamesh_Chaudhary.pdf" target="_blank" rel="noopener noreferrer" download>
+                        <button className="bg-gray-300 hover:dark:bg-black hover:bg-white text-gray-800 hover:text-yellow-400 shadow transition-all px-4 py-2 rounded-xl font-bold mt-4">Get My Resume</button>
+                    </a>
                 </div>
 
                 <div className="relative min-h-20 flex-1">
