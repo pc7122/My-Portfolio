@@ -1,6 +1,5 @@
 "use client"
-import { FaInstagram, FaFacebookSquare, FaGithub, FaKaggle, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import { FaInstagram, FaFacebookSquare, FaGithub, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaLocationDot } from "react-icons/fa6";
 
