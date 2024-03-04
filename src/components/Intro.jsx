@@ -5,7 +5,7 @@ export default function Intro() {
         <div className="container mx-auto px-4">
             <div className="min-h-screen flex flex-wrap justify-between items-center">
 
-                <div className="px-4 pt-8">
+                <div className="px-4 pt-8" data-aos="fade-right">
                     <h1 className="text-lg font-semibold leading-tight text-gray-900 dark:text-white mb-5">Welcome to my portfolio</h1>
                     <h1 className="text-5xl font-bold leading-tight text-gray-950 dark:text-white">
                         <span className="me-2">Hey folks, I`m</span>
@@ -21,7 +21,7 @@ export default function Intro() {
 
                 <div className="relative min-h-20 flex-1">
                     <div className="-z-10 absolute top-0 md:left-1/3 w-96 h-96 rounded-full bg-gradient-to-br from-indigo-500 from-20% via-sky-500 via-30% to-emerald-500 to-90% dark:opacity-40 md:dark:opacity-70"></div>
-                    <div className="-z-10 absolute bottom-0 right-0 w-60 h-60 rounded-full bg-gradient-to-tr from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% dark:opacity-50"></div>
+                    <div className="-z-10 absolute bottom-0 right-0 w-60 h-60 rounded-full bg-gradient-to-tr from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% dark:opacity-70"></div>
                 </div>
 
             </div>

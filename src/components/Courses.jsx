@@ -1,7 +1,7 @@
 "use client"
-import { useState } from 'react';
+
 import Image from "next/image";
-import { IoClose } from "react-icons/io5";
+import { useState } from 'react';
 
 const courses = [
     {
@@ -53,13 +53,13 @@ export default function Courses() {
         <section id="courses" className="py-5 px-4">
             {showModal !== -1 && <Modal index={showModal} fun={setShowModal} />}
             <div className="container mx-auto mt-[7rem]">
-                <h1 className="section-title">Courses</h1>
+                <h1 className="section-title" data-aos="fade-right">Courses</h1>
 
                 <div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
                         {
                             courses.map((course, index) => (
-                                <div key={index} onClick={() => setShowModal(index)} className="card w-full text-black dark:text-white bg-gray-300 dark:bg-[#282828] p-4 py-6 rounded-lg">
+                                <div key={index} data-aos="zoom-in" onClick={() => setShowModal(index)} className="card w-full text-black dark:text-white bg-gray-300 dark:bg-[#282828] p-4 py-6 rounded-lg">
                                     <div className="card-body">
                                         <h2 className="text-lg font-semibold mb-5 min-h-14">{course.title}</h2>
                                         <div className="w-full">

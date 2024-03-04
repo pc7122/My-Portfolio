@@ -57,18 +57,20 @@ export default function About() {
     return (
         <section id="about" className="py-5 px-4">
             <div className="container mx-auto">
-                <h1 className="section-title">About</h1>
+                <h1 className="section-title" data-aos="fade-right">About</h1>
                 <p className="section-desc">A team-oriented AI engineer with problem-solving skills and project-specific knowledge. Passionate about coding, web design, and handling real-world data. Experienced in web development as well.</p>
 
                 <div className="grid lg:flex gap-10 justify-center my-5 text-white">
-                    <div className="relative">
-                        <div className="circle absolute top-0 left-0 w-20 h-20 bg-orange-500 rounded-lg"></div>
-                        <div className="circle absolute bottom-0 right-0 w-20 h-20 bg-orange-500 rounded-lg"></div>
-                        <div className="p-2 bg-gray-600 dark:bg-slate-50 rounded-lg bg-opacity-10 shadow-lg backdrop-blur">
-                            <Image src="/profile.jpg" alt="Profile" width={350} height={350} className="mx-auto min-w-96 rounded-lg" />
+                    <div>
+                        <div className="relative w-fit mx-auto" data-aos="zoom-in">
+                            <div className="circle absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-indigo-500 from-20% via-sky-500 via-30% to-emerald-500 to-90% rounded-lg"></div>
+                            <div className="circle absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tr from-indigo-500 from-20% via-sky-500 via-30% to-emerald-500 to-90% rounded-lg"></div>
+                            <div className="p-2 bg-gray-600 dark:bg-slate-50 rounded-lg bg-opacity-20 dark:bg-opacity-10 shadow-lg backdrop-blur">
+                                <Image src="/profile.jpg" alt="Profile" width={350} height={350} className="mx-auto min-w-96 rounded-lg" />
+                            </div>
                         </div>
                     </div>
-                    <div className="grow">
+                    <div className="grow" data-aos="fade-right">
                         <h2 className="text-3xl font-bold text-black dark:text-white">Prathamesh Chaudhary</h2>
                         <div className="w-full h-1 bg-gray-950 dark:bg-white mb-4"></div>
 
@@ -93,18 +95,18 @@ export default function About() {
                 </div>
 
                 <div className="md:columns-2 gap-10 mt-10 px-6">
-                    <div className="column">
-                        <h1 className="title">Experience</h1>
+                    <div className="column mb-5">
+                        <h1 className="title" data-aos="zoom-in">Experience</h1>
                         <div>
                             {experience.map((exp, index) => (
                                 <div key={index} className="timeline relative before:absolute before:top-0 before:left-0 before:h-full before:w-1 before:bg-gray-600 before:-translate-x-1/2">
                                     <div className="p-5 pr-0 m-0">
-                                        <div className="absolute top-0 left-0 w-10 h-10 bg-gray-600 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                                        <div className="absolute top-0 left-0 w-8 h-8 border-2 border-gray-600 bg-white dark:bg-black rounded-full -translate-x-1/2 -translate-y-1/2"></div>
                                         <div className="text-black dark:text-white space-y-2">
-                                            <h3 className="text-2xl font-bold">{exp.title}</h3>
-                                            <h4 className="text-lg font-bold text-yellow-400">{exp.company}</h4>
+                                            <h3 className="text-2xl font-bold" data-aos="fade-right">{exp.title}</h3>
+                                            <h4 className="text-lg font-bold text-yellow-400" data-aos="fade-right">{exp.company}</h4>
                                             <p className="bg-gray-950 dark:bg-white rounded text-white dark:text-black font-bold px-1 w-fit">{exp.date}</p>
-                                            <ul className="text-justify list-disc ml-5">
+                                            <ul className="text-justify list-disc ml-5" data-aos="zoom-in">
                                                 {exp.desc.map((desc, index) => (
                                                     <li key={index}>{desc}</li>
                                                 ))}
@@ -116,19 +118,19 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className="column">
-                        <h1 className="title">Education</h1>
+                    <div className="column mb-5">
+                        <h1 className="title" data-aos="zoom-in">Education</h1>
                         <div>
                             {education.map((edu, index) => (
                                 <div key={index} className="timeline relative before:absolute before:top-0 before:left-0 before:h-full before:w-1 before:bg-gray-600 before:-translate-x-1/2">
                                     <div className="p-5 pr-0 m-0">
-                                        <div className="absolute top-0 left-0 w-10 h-10 bg-gray-600 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                                        <div className="absolute top-0 left-0 w-8 h-8 border-2 border-gray-600 bg-white dark:bg-black rounded-full -translate-x-1/2 -translate-y-1/2"></div>
                                         <div className="text-black dark:text-white space-y-2">
-                                            <h3 className="text-2xl font-bold">
+                                            <h3 className="text-2xl font-bold" data-aos="fade-right">
                                                 {edu.title}
                                                 {edu.major && <span className="block md:inline"> ({edu.major})</span>}
                                             </h3>
-                                            <h4 className="text-lg font-bold text-yellow-400">{edu.institute}</h4>
+                                            <h4 className="text-lg font-bold text-yellow-400" data-aos="fade-right">{edu.institute}</h4>
                                             <p className="bg-gray-950 dark:bg-white rounded text-white dark:text-black font-bold px-1 w-fit">{edu.date}</p>
                                         </div>
                                     </div>

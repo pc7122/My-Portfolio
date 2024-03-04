@@ -42,7 +42,7 @@ export default function Skills() {
                         {
                             skills.programming.map((skill, index) => (
                                 <div key={index} className="column text-black dark:text-white">
-                                    <div>
+                                    <div data-aos="fade-up">
                                         <div className="text-base font-bold uppercase">
                                             {skill.name}
                                             <span className="float-right">{skill.level}</span>
@@ -64,7 +64,7 @@ export default function Skills() {
                         {
                             skills.web.map((skill, index) => (
                                 <div key={index} className="column text-black dark:text-white md:mt-10">
-                                    <div>
+                                    <div data-aos="fade-up">
                                         <div className="text-base font-bold uppercase">
                                             {skill.name}
                                             <span className="float-right">{skill.level}</span>
@@ -92,8 +92,10 @@ export default function Skills() {
                         {
                             alsoKnown.map((icon, index) => (
                                 <div key={index}>
-                                    <Image key={index} src={`/icons/${icon.path}`} alt={icon.name} width={50} height={50} className="mx-auto" />
-                                    <span className="block text-black dark:text-white text-sm font-semibold mt-2 text-center">{icon.name}</span>
+                                    <div data-aos="zoom-in">
+                                        <Image key={index} src={`/icons/${icon.path}`} alt={icon.name} width={50} height={50} className="mx-auto" />
+                                        <span className="block text-black dark:text-white text-sm font-semibold mt-2 text-center">{icon.name}</span>
+                                    </div>
                                 </div>
                             ))
                         }
