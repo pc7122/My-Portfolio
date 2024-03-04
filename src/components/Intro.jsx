@@ -1,4 +1,5 @@
 "use client"
+import { FaGithub } from "react-icons/fa";
 
 export default function Intro() {
     return (
@@ -16,9 +17,16 @@ export default function Intro() {
                         </div>
                     </h1>
                     <p className="text-lg text-gray-950 dark:text-gray-300">Building a successful product is a challenge. I am highly energetic in development.</p>
-                    <a href="/Prathamesh_Chaudhary.pdf" target="_blank" rel="noopener noreferrer" download>
-                        <button className="bg-gray-300 hover:dark:bg-black hover:bg-white text-gray-800 hover:text-yellow-400 shadow transition-all px-4 py-2 rounded-xl font-bold mt-4">Get My Resume</button>
-                    </a>
+                    <div className="mt-5 flex items-center gap-5">
+                        <a href="/Prathamesh_Chaudhary.pdf" target="_blank" rel="noopener noreferrer" download>
+                            <button className="bg-gray-300 hover:dark:bg-black hover:bg-white text-gray-800 hover:text-yellow-400 shadow transition-all px-4 py-2 rounded-xl font-bold">Get My Resume</button>
+                        </a>
+                        <div className="w-10 h-10 rounded-full flex justify-center items-center bg-black dark:bg-white text-white dark:text-black shadow-lg">
+                            <a href="https://github.com/pc7122" target="_blank" rel="noreferrer" className="text-3xl mx-2">
+                                <FaGithub className="text-4xl" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="relative min-h-20 flex-1">
