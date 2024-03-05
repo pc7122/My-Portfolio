@@ -37,13 +37,13 @@ export default function Projects() {
                 <h1 className="section-title" data-aos="fade-right">Projects</h1>
 
                 <div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
                         {
                             projects.map((projects, index) => (
-                                <div key={index} className="project-container relative h-fit rounded-lg shadow dark:shadow-white overflow-hidden">
+                                <div key={index} className="project-container relative rounded-lg shadow dark:shadow-white overflow-hidden">
                                     <div className="overlay overflow-hidden absolute bottom-0 left-0 w-full transition-all bg-gradient-to-t from-[#000000] from-20% via-[#000000c0] via-40% to-[#00000050] to-50%">
                                         <div className="flex flex-col justify-center items-center h-full gap-5">
-                                            <div className="flex items-center gap-5 h-[60%] md:h-[65%]">
+                                            <div className="flex items-center gap-5 h-[60%] lg:h-[65%]">
                                                 <div className="w-14 h-14 rounded-full flex justify-center items-center bg-white text-black shadow-lg">
                                                     <a href={projects.github} target="_blank" rel="noreferrer" className="text-3xl mx-2">
                                                         <FaGithub className="text-4xl" />
@@ -58,14 +58,14 @@ export default function Projects() {
                                                     </div>
                                                 }
                                             </div>
-                                            <div className="h-[40%] md:h-[35%] w-full px-5 overflow-clip">
+                                            <div className="h-[40%] lg:h-[35%] w-full px-5 overflow-clip">
                                                 <h1 className="text-lg font-bold text-white text-">{projects.title}</h1>
                                                 <p className="text-base text-white text-justify leading-tight">{projects.description}</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="rounded-lg">
-                                        <Image src={`/thumbnails/${projects.image}`} alt={projects.title} width={500} height={400} className="aspect-video" />
+                                        <Image src={`/thumbnails/${projects.image}`} alt={projects.title} width={700} height={600} className="aspect-video mx-auto" />
                                     </div>
                                 </div>
                             ))
