@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply dark:bg-black bg-white;
+    @apply dark:bg-black bg-white text-blue-700 dark:text-yellow-400;
   }
 
   .title {
@@ -19,7 +19,7 @@
 
   .section-title {
     @apply relative text-4xl font-extrabold leading-tight text-gray-950 dark:text-white w-min mb-5;
-    @apply before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-yellow-400;
+    @apply before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-blue-700 dark:before:bg-yellow-400;
   }
 
   .section-desc {
@@ -107,6 +107,10 @@
 html {
   overflow-x: hidden;
   scrollbar-width: thin;
+  scrollbar-color: rgb(36, 21, 250) black;
+}
+
+html.dark {
   scrollbar-color: rgb(250, 204, 21) white;
 }
 

@@ -1,11 +1,12 @@
 "use client"
 import Image from "next/image";
+import Timeline from "@/components/Timeline";
 
 export default function About() {
     const experience = [
         {
             title: "Data Analyst - Intern",
-            company: "NoQs Digital",
+            organization: "NoQs Digital",
             date: "Jul 2023 - Sep 2023",
             desc: [
                 "Leveraged the capabilities of Google Sheets to craft dashboards, demonstrating a hands-on approach to proficiency.",
@@ -15,7 +16,7 @@ export default function About() {
         },
         {
             title: "Data Science - Intern",
-            company: "NoQs Digital",
+            organization: "Ahen Pvt. Ltd.",
             date: "Jan 2023 - Feb 2023",
             desc: [
                 "Implemented advanced web scraping techniques to collect and analyze data from Google Maps, focusing on user ratings and feedback for driving schools.",
@@ -24,7 +25,7 @@ export default function About() {
         },
         {
             title: "PHP Developer - Trainee",
-            company: "R. B. Tech Services",
+            organization: "R. B. Tech Services",
             date: "Jul 2020 - Aug 2020",
             desc: [
                 "Conceptualized, designed, and implemented a user-friendly notice management system using PHP, SQL, and JavaScript.",
@@ -36,20 +37,20 @@ export default function About() {
 
     const education = [
         {
-            title: "Bachelor's",
+            title: "Bachelor's Degree",
             major: "Artificial Intelligence",
-            institute: "AISSMS Institute of Information Technology",
+            organization: "AISSMS Institute of Information Technology",
             date: "2021 - 2024",
         },
         {
-            title: "Dioploma",
+            title: "Diploma",
             major: "Computer Engineering",
-            institute: "Government Polytechnic",
+            organization: "Government Polytechnic",
             date: "2018 - 2021",
         },
         {
             title: "SSC",
-            institute: "B. N. Sarda Vidyalaya",
+            organization: "B. N. Sarda Vidyalaya",
             date: "2017 - 2018",
         }
     ];
@@ -99,21 +100,7 @@ export default function About() {
                         <h1 className="title" data-aos="zoom-in">Experience</h1>
                         <div>
                             {experience.map((exp, index) => (
-                                <div key={index} className="timeline relative before:absolute before:top-0 before:left-0 before:h-full before:w-1 before:bg-gray-600 before:-translate-x-1/2">
-                                    <div className="p-5 pr-0 m-0">
-                                        <div className="absolute top-0 left-0 w-8 h-8 border-2 border-gray-600 bg-white dark:bg-black rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                                        <div className="text-black dark:text-white space-y-2">
-                                            <h3 className="text-2xl font-bold" data-aos="fade-right">{exp.title}</h3>
-                                            <h4 className="text-lg font-bold text-yellow-400" data-aos="fade-right">{exp.company}</h4>
-                                            <p className="bg-gray-950 dark:bg-white rounded text-white dark:text-black font-bold px-1 w-fit">{exp.date}</p>
-                                            <ul className="text-justify list-disc ml-5" data-aos="zoom-in">
-                                                {exp.desc.map((desc, index) => (
-                                                    <li key={index}>{desc}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Timeline key={index} data={exp} />
                             ))}
                         </div>
                     </div>
@@ -122,19 +109,7 @@ export default function About() {
                         <h1 className="title" data-aos="zoom-in">Education</h1>
                         <div>
                             {education.map((edu, index) => (
-                                <div key={index} className="timeline relative before:absolute before:top-0 before:left-0 before:h-full before:w-1 before:bg-gray-600 before:-translate-x-1/2">
-                                    <div className="p-5 pr-0 m-0">
-                                        <div className="absolute top-0 left-0 w-8 h-8 border-2 border-gray-600 bg-white dark:bg-black rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                                        <div className="text-black dark:text-white space-y-2">
-                                            <h3 className="text-2xl font-bold" data-aos="fade-right">
-                                                {edu.title}
-                                                {edu.major && <span className="block md:inline"> ({edu.major})</span>}
-                                            </h3>
-                                            <h4 className="text-lg font-bold text-yellow-400" data-aos="fade-right">{edu.institute}</h4>
-                                            <p className="bg-gray-950 dark:bg-white rounded text-white dark:text-black font-bold px-1 w-fit">{edu.date}</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Timeline key={index} data={edu} />
                             ))}
                         </div>
                     </div>

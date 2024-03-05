@@ -1,10 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
-import { ImSun } from "react-icons/im";
-import { IoMoonOutline } from "react-icons/io5";
+import { IoPartlySunny, IoMoon } from "react-icons/io5";
+import { motion } from "framer-motion";
 
-
-export default function Toggle(props) {
+export default function Toggle() {
     const [darkMode, setDarkMode] = useState(true);
 
     useEffect(() => {
@@ -30,13 +29,18 @@ export default function Toggle(props) {
 
     return (
         <div>
-            <div className="text-gray-900 dark:text-white font-bold leading-tight cursor-pointer inline-flex p-2" onClick={() => { setDarkMode(!darkMode) }}>
-                {
-                    darkMode
-                        ? <IoMoonOutline className="mr-2 text-2xl md:text-xl" />
-                        : <ImSun className="mr-2 text-2xl md:text-xl" />
-                }
-                <span className="hidden md:inline">{props.text}</span>
+            <div className="w-16 h-8 bg-sky-500 dark:bg-yellow-400 bg-opacity-40 rounded-full cursor-pointer p-1 flex justify-start data-[ison=true]:justify-end" data-ison={darkMode} onClick={() => setDarkMode(!darkMode)}>
+                <motion.div
+                    layout
+                    className="w-8 h-6 bg-white dark:bg-black rounded-full flex justify-center items-center"
+                    transition={{ type: "spring", stiffness: 700, damping: 30 }}>
+                    {
+                        darkMode
+                            ? <IoMoon className="text-xl text-white" />
+                            : <IoPartlySunny className="text-xl text-yellow-400" />
+                    }
+                </motion.div>
+
             </div>
         </div>
     );
