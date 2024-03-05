@@ -7,7 +7,7 @@ export default function Projects() {
         {
             title: "Emosense",
             description: "Multimodal Emotion Recognition Web App",
-            image: "EmoSense.png",
+            image: "Emosense.png",
             github: "https://github.com/pc7122/EmoSense",
         },
         {
