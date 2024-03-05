@@ -7,13 +7,13 @@ export default function Projects() {
         {
             title: "Emosense",
             description: "Multimodal Emotion Recognition Web App",
-            image: "pro.png",
+            image: "EmoSense.png",
             github: "https://github.com/pc7122/EmoSense",
         },
         {
-            title: "Todo App (Django and React)",
-            description: "Todo App built using Django rest framework and React JS.",
-            image: "pro.png",
+            title: "Todo App (Django & React)",
+            description: "Todo App using Django Rest Framework and React with JWT Authentication",
+            image: "Todo App.png",
             github: "https://github.com/pc7122/TodoApp-React-Django",
         },
         {
@@ -24,10 +24,10 @@ export default function Projects() {
             demo: "https://github.com/pc7122/Tic-Tac-Toe-App/releases/download/v1.0.0/Tic.Tac.Toe.apk",
         },
         {
-            title: "MyShows",
-            description: "Online Movie Ticket Booking Website built using PHP and MySQL",
-            image: "pro.png",
-            github: "https://github.com/pc7122/MyShows",
+            title: "Car Object Detection",
+            description: "Car Object Detection using YOLOv5 and OpenCV in Python.",
+            image: "Car Object Detection.png",
+            github: "https://github.com/pc7122/YOLO-Car-Object-Detection",
         },
     ];
 
