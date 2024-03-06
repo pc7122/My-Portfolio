@@ -11,6 +11,7 @@ export default function Header() {
         { name: 'About', link: '#' },
         { name: 'Courses', link: '/courses' },
         { name: 'Projects', link: '/projects' },
+        { name: 'Photography', link: '/photographs' },
     ];
 
     const toggleNav = () => {
