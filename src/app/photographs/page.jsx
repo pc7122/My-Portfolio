@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 function ImageViewer({ selectedImage, setSelectedImage }) {
@@ -37,11 +37,11 @@ export default function PhotographsPage() {
                     selectedImage && <ImageViewer selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
                 }
                 <div>
-                    <div className="grid grid-cols-2 xl:grid-cols-3 gap-7">
+                    <div className="grid grid-cols-2 xl:grid-cols-4 gap-7">
                         {
-                            new Array(4).fill(0).map((_, index) => (
-                                <motion.div key={`image-${index + 1}`} className="bg-gray-200 w-full rounded-md overflow-hidden" layoutId={`image-${index + 1}`}>
-                                    <div className="w-full h-[8rem] md:h-[14rem] lg:h-[22rem]">
+                            new Array(10).fill(0).map((_, index) => (
+                                <motion.div key={`image-${index + 1}`} className="bg-gray-200/40 w-full rounded-md overflow-hidden" layoutId={`image-${index + 1}`}>
+                                    <div className="w-full h-[8rem] md:h-[14rem] xl:h-[16rem]">
                                         <Image
                                             src={`/photos/${index + 1}.jpg`}
                                             alt="Photograph"
@@ -50,8 +50,7 @@ export default function PhotographsPage() {
                                             className="rounded-md object-cover w-full h-full cursor-pointer ease-out transition-all hover:scale-105"
                                             data-id={index + 1}
                                             onClick={handleClick}
-                                            placeholder="blur"
-                                            blurDataURL={`/photos/${index + 1}.jpg?lqip`}
+                                            loading="lazy"
                                             unoptimized={true}
                                         />
                                     </div>
