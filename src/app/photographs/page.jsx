@@ -14,7 +14,6 @@ function ImageViewer({ selectedImage, setSelectedImage }) {
                     height={500}
                     className="object-contain w-full h-full rounded-lg"
                     onClick={(e) => e.stopPropagation()}
-                    unoptimized={true}
                 />
             </motion.div>
         </div>
@@ -50,8 +49,6 @@ export default function PhotographsPage() {
                                             className="rounded-md object-cover w-full h-full cursor-pointer ease-out transition-all hover:scale-105"
                                             data-id={index + 1}
                                             onClick={handleClick}
-                                            loading="lazy"
-                                            unoptimized={true}
                                         />
                                     </div>
                                 </motion.div>
