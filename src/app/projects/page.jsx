@@ -35,6 +35,12 @@ export default function ProjectsPage() {
             image: "Car Object Detection.png",
             github: "https://github.com/pc7122/YOLO-Car-Object-Detection",
         },
+        {
+            title: "MyShows",
+            description: "Movie Ticket Booking Website using PHP and MySQL.",
+            image: "MyShows.png",
+            github: "https://github.com/pc7122/MyShows",
+        },
     ];
 
     return (
@@ -43,7 +49,7 @@ export default function ProjectsPage() {
                 <h1 className="section-title" data-aos="fade-right">Projects</h1>
 
                 <div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
                         {
                             projects.map((projects, index) => (
                                 <ProjectCard key={index} project={projects} />

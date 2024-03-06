@@ -1,5 +1,4 @@
 "use client"
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
@@ -39,7 +38,7 @@ export default function Page() {
 
     return (
         <section id="courses" className="py-5 px-4">
-            {showModal && <CourseModal course={courses[showModal]} onClose={() => setShowModal(null)} />}
+            {showModal !== null && <CourseModal course={courses[showModal]} onClose={() => setShowModal(null)} />}
             <div className="container mx-auto mt-[7rem]">
                 <h1 className="section-title" data-aos="fade-right">Courses</h1>
 
