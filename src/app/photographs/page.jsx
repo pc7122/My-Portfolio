@@ -6,7 +6,17 @@ import { useState } from "react";
 function ImageViewer({ selectedImage, setSelectedImage }) {
     return (
         <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50" onClick={() => setSelectedImage(null)}>
-            <motion.div className="h-[50rem]" layoutId={`image-${selectedImage}`}>
+            <motion.button
+                className="fixed top-5 right-5 bg-white/80 text-black/80 p-2 rounded-full"
+                onClick={() => setSelectedImage(null)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </motion.button>
+            <motion.div className="h-[32rem] md:h-[50rem]" layoutId={`image-${selectedImage}`}>
                 <Image
                     src={`/photos/${selectedImage}.jpg`}
                     alt="Photograph"
