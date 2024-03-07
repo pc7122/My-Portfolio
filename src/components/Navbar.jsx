@@ -17,10 +17,12 @@ export default function Header() {
     ];
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
         if (window.innerWidth > 768) setShowNav(true);
     }, []);
 
     window.addEventListener('resize', () => {
+        if (typeof window === 'undefined') return;
         if (window.innerWidth > 768) setShowNav(true);
         else setShowNav(false);
     });
