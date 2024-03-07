@@ -6,6 +6,10 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .circle-open {
+    clip-path: circle(50rem at top 0 right 50%);
+  }
 }
 
 @layer base {
@@ -15,6 +19,14 @@
 
   .title {
     @apply relative text-3xl font-extrabold leading-tight text-gray-950 dark:text-white w-min mb-10;
+  }
+
+  .blue-shade {
+    @apply bg-gradient-to-br from-indigo-800 from-20% to-blue-400 to-80%;
+  }
+
+  .yellow-shade {
+    @apply bg-gradient-to-br from-yellow-600 from-10% to-yellow-300 to-80%;
   }
 
   .section-title {
