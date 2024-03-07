@@ -1,12 +1,14 @@
 'use client'
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { stagger, useAnimate } from 'framer-motion';
 import Toggle from './Toggle.jsx';
+import useWindowSize from './useWindowSize.jsx';
 
 export default function Header() {
     const [showNav, setShowNav] = useState(false);
     const [scope, animate] = useAnimate();
+    const { width } = useWindowSize();
 
 
     const navItems = [
@@ -17,15 +19,9 @@ export default function Header() {
     ];
 
     useEffect(() => {
-        if (typeof window === 'undefined') return;
-        if (window.innerWidth > 768) setShowNav(true);
-    }, []);
-
-    window.addEventListener('resize', () => {
-        if (typeof window === 'undefined') return;
-        if (window.innerWidth > 768) setShowNav(true);
+        if (width > 768) setShowNav(true);
         else setShowNav(false);
-    });
+    }, [width]);
 
     useEffect(() => {
         animate("nav", {
