@@ -33,7 +33,7 @@ export default function ProjectCard({ project }) {
                                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                                 className="w-14 h-14 rounded-full flex justify-center items-center bg-white text-black shadow-lg"
                             >
-                                <a href={project.demo} target="_blank" rel="noreferrer" className="text-3xl mx-2">
+                                <a href={project.demo} target="_blank" rel="noreferrer" className="text-3xl mx-2" download>
                                     <FaLink className="text-3xl" />
                                 </a>
                             </motion.div>
