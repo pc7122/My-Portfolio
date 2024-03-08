@@ -9,7 +9,7 @@ export default function Intro() {
 
                 <div className="px-4 pt-8" data-aos="fade-right">
                     <h1 className="text-lg font-semibold leading-tight text-gray-900 dark:text-white mb-5">Welcome to my portfolio</h1>
-                    <h1 className="text-5xl font-bold leading-tight">
+                    <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
                         <span className="me-2 text-gray-950 dark:text-white">Hey folks, I`m</span>
                         <div className="animated-role relative inline-flex">
                             <span className="text-nowrap">Web Developer</span>
@@ -37,7 +37,7 @@ export default function Intro() {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                        className="-z-10 absolute top-0 md:left-1/3 w-96 h-96 rounded-full bg-gradient-to-br from-indigo-500 from-20% via-sky-500 via-30% to-emerald-500 to-90% dark:opacity-40 md:dark:opacity-70"
+                        className="-z-10 absolute top-0 md:left-1/3 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-br from-indigo-500 from-20% via-sky-500 via-30% to-emerald-500 to-90% dark:opacity-40 md:dark:opacity-70"
                     />
                     <motion.div
                         initial={{ scale: 0 }}

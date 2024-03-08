@@ -1,4 +1,4 @@
-import { Maven_Pro, Roboto, Bebas_Neue } from "next/font/google";
+import { Maven_Pro, Roboto, Lexend } from "next/font/google";
 import Nabvar from "@/components/Navbar";
 import "./globals.css";
 
@@ -13,11 +13,11 @@ const roboto = Roboto({
   variable: '--font-roboto',
 })
 
-const bebas = Bebas_Neue({
+const lexend = Lexend({
   weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-bebas',
+  variable: '--font-lexend',
 })
 
 
@@ -29,7 +29,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${roboto.variable} ${bebas.variable}`}>
+      <body className={`${inter.className} ${roboto.variable} ${lexend.variable}`}>
         <Nabvar />
         {children}
       </body>

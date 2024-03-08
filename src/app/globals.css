@@ -6,15 +6,11 @@
   .text-balance {
     text-wrap: balance;
   }
-
-  .circle-open {
-    clip-path: circle(50rem at top 0 right 50%);
-  }
 }
 
 @layer base {
   body {
-    @apply dark:bg-black bg-white text-blue-700 dark:text-yellow-400;
+    @apply dark:bg-black bg-white text-blue-700 dark:text-yellow-400 w-screen overflow-x-hidden;
   }
 
   .title {
@@ -42,8 +38,8 @@
     @apply text-2xl font-semibold text-gray-950 dark:text-white mb-5;
   }
 
-  .bebas {
-    font-family: var(--font-bebas);
+  .lexend {
+    font-family: var(--font-lexend);
   }
 
   .roboto {
@@ -124,6 +120,12 @@ html {
 
 html.dark {
   scrollbar-color: rgb(250, 204, 21) white;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    scrollbar-width: none;
+  }
 }
 
 @keyframes overBorder1 {

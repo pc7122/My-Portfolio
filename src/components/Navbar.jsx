@@ -48,7 +48,7 @@ export default function Header() {
 
     return (
         <header ref={scope} className="fixed top-0 left-0 right-0 w-full bg-white dark:bg-black z-10">
-            <div className="container mx-auto p-4 pt-6">
+            <div className="lg:container mx-auto p-4 pt-6">
                 <div className="flex flex-wrap justify-between items-center">
                     <div>
                         <h1 className="text-2xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-br blue-shade dark:yellow-shade">
