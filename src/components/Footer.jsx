@@ -51,7 +51,7 @@ export default function Footer() {
                             </a>
                         </div>
                         <div className="w-12 h-12 rounded-full flex justify-center items-center bg-white text-blue-600">
-                            <a href="https://www.instagram.com/prathamesh_7122/" target="_blank" rel="noreferrer" className="text-3xl mx-2">
+                            <a href="https://www.facebook.com/prathamesh.chaudhary.92/" target="_blank" rel="noreferrer" className="text-3xl mx-2">
                                 <FaFacebookSquare className="text-2xl" />
                             </a>
                         </div>

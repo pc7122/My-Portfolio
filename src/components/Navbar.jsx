@@ -1,11 +1,13 @@
 'use client'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { stagger, useAnimate } from 'framer-motion';
 import Toggle from './Toggle.jsx';
 import useWindowSize from './useWindowSize.jsx';
 
 export default function Header() {
+    const pathname = usePathname();
     const [showNav, setShowNav] = useState(false);
     const [scope, animate] = useAnimate();
     const { width } = useWindowSize();
@@ -60,7 +62,13 @@ export default function Header() {
                         <ul className="flex md:flex-row flex-col text-center gap-6 md:gap-8 leading-normal py-6 md:py-0">
                             {navItems.map((item, index) => (
                                 <li key={index} className="overflow-hidden">
-                                    <Link href={item.link} className="text-gray-950 dark:text-gray-300 text-base font-bold">
+                                    <Link
+                                        href={item.link}
+                                        className={
+                                            pathname == item.link
+                                                ? "text-blue-700 dark:text-yellow-400 text-base font-bold"
+                                                : "text-gray-950 dark:text-gray-300 text-base font-bold"
+                                        }>
                                         <span
                                             data-hover={item.name}
                                             className="relative transition-all inline-block before:content-[attr(data-hover)] before:text-blue-700 dark:before:text-yellow-400 before:absolute before:top-full hover:-translate-y-full">
