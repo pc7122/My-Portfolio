@@ -17,6 +17,12 @@ export default function ProjectsPage() {
             github: "https://github.com/pc7122/EmoSense",
         },
         {
+            title: "Plant Disease Detection",
+            description: "Plant Disease Detection using CNN and FastAPI in Python",
+            image: "Plant.png",
+            github: "https://github.com/pc7122/Plant-Disease-Detection",
+        },
+        {
             title: "Todo App (Django & React)",
             description: "Todo App using Django Rest Framework and React with JWT Authentication",
             image: "Todo App.png",
