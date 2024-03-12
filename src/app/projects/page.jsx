@@ -18,9 +18,10 @@ export default function ProjectsPage() {
         },
         {
             title: "Plant Disease Detection",
-            description: "Plant Disease Detection using CNN and FastAPI in Python",
+            description: "Plant Disease Detection using CNN and FastAPI in Python with React Frontend.",
             image: "Plant.png",
             github: "https://github.com/pc7122/Plant-Disease-Detection",
+            demo: "https://plant-disease-detection-pc7122.vercel.app/"
         },
         {
             title: "Todo App (Django & React)",
