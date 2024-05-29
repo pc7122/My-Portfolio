@@ -28,8 +28,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${roboto.variable} ${lexend.variable}`}>
+    <html lang="en" className={`${inter.className} ${roboto.variable} ${lexend.variable}`}>
+      <body>
         <Nabvar />
         {children}
       </body>
