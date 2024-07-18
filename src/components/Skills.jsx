@@ -6,25 +6,22 @@ export default function Skills() {
     const skills = {
         programming: [
             { name: "Python", level: "80%" },
-            { name: "Java", level: "60%" },
-            { name: "Javascript", level: "60%" },
+            { name: "Java", level: "50%" },
         ],
         web: [
             { name: "HTML/CSS", level: "80%" },
+            { name: "Javascript", level: "60%" },
+            { name: "Tailwind CSS", level: "70%" },
             { name: "Bootstrap", level: "60%" },
-            { name: "Tailwind CSS", level: "60%" },
-            { name: "React js", level: "70%" },
-            { name: "Next.js", level: "50%" },
-            { name: "Flask", level: "70%" },
-            { name: "Django", level: "70%" },
-            { name: "PHP", level: "70%" },
+            { name: "React js", level: "50%" },
+            { name: "Flask", level: "60%" },
+            { name: "Django", level: "60%" },
         ],
     }
 
     const alsoKnown = [
         { name: "jQuery", path: "jquery-icon.png" },
         { name: "Tailwind", path: "tailwindcss-icon.svg" },
-        { name: "NextJS", path: "nextjs-icon.png" },
         { name: "MySQL", path: "mysql-icon.svg" },
         { name: "MongoDB", path: "mongodb-icon.svg" },
         { name: "Tensorflow", path: "tensorflow-icon.svg" },

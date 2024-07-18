@@ -13,8 +13,8 @@ export default function Intro() {
                         <span className="me-2 text-gray-950 dark:text-white">Hey folks, I`m</span>
                         <div className="animated-role relative inline-flex">
                             <span className="text-nowrap">Web Developer</span>
-                            <span className="absolute text-nowrap">ML Engineer</span>
-                            <span className="absolute text-nowrap">Data Engineer</span>
+                            <span className="absolute text-nowrap">Python Developer</span>
+                            <span className="absolute text-nowrap">AI Enthusiast</span>
                         </div>
                     </h1>
                     <p className="text-lg text-gray-950 dark:text-gray-300 mt-3">Building a successful product is a challenge. I am highly energetic in development.</p>
