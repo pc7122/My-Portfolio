@@ -1,5 +1,6 @@
 import { Maven_Pro, Roboto, Lexend } from "next/font/google";
 import Nabvar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Maven_Pro({
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body>
         <Nabvar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
