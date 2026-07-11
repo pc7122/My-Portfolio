@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@mui/icons-material": "^9.0.1",
     "@mui/material": "^9.0.1",
