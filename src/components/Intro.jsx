@@ -19,7 +19,7 @@ export default function Intro() {
                     </h1>
                     <p className="text-lg text-gray-950 dark:text-gray-300 mt-3">Building a successful product is a challenge. I am highly energetic in development.</p>
                     <div className="mt-5 flex items-center gap-8">
-                        <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.7 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} href="/Prathamesh_Chaudhary.pdf" target="_blank" rel="noopener noreferrer" download>
+                        <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.7 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} href="/Prathamesh_Chaudhary.pdf" target="_blank" rel="noopener noreferrer">
                             <button className="bg-gray-300 text-gray-800 shadow transition-all px-4 py-2 rounded-xl font-bold">
                                 Get My Resume
                             </button>

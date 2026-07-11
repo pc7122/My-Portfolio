@@ -1,179 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Midnight Indigo Design System
+   All colors HSL. Modern dark portfolio with electric indigo accents.
+*/
+
+@layer base {
+  :root {
+    /* Core surfaces */
+    --background: 240 50% 3%;
+    --foreground: 230 30% 96%;
+
+    --card: 235 42% 11%;
+    --card-foreground: 230 25% 95%;
+
+    --popover: 235 42% 11%;
+    --popover-foreground: 230 25% 95%;
+
+    /* Brand */
+    --primary: 244 80% 64%;
+    --primary-foreground: 230 30% 98%;
+    --primary-glow: 255 92% 72%;
+
+    --secondary: 235 38% 18%;
+    --secondary-foreground: 230 25% 92%;
+
+    --muted: 235 32% 15%;
+    --muted-foreground: 230 20% 78%;
+
+    --accent: 252 92% 72%;
+    --accent-foreground: 240 47% 4%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 230 30% 98%;
+
+    --border: 235 40% 24%;
+    --input: 235 32% 18%;
+    --ring: 250 95% 75%;
+
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(244 75% 60%), hsl(265 85% 65%));
+    --gradient-aurora: radial-gradient(ellipse at top, hsl(244 75% 60% / 0.35), transparent 60%),
+                       radial-gradient(ellipse at bottom right, hsl(265 85% 65% / 0.25), transparent 55%),
+                       radial-gradient(ellipse at bottom left, hsl(220 80% 50% / 0.2), transparent 50%);
+    --gradient-text: linear-gradient(135deg, hsl(230 30% 98%), hsl(244 75% 75%));
+    --gradient-mesh: conic-gradient(from 180deg at 50% 50%, hsl(244 75% 60%), hsl(265 85% 65%), hsl(220 80% 50%), hsl(244 75% 60%));
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(244 75% 60% / 0.4);
+    --shadow-card: 0 20px 60px -15px hsl(240 50% 2% / 0.6), 0 0 0 1px hsl(235 30% 16%);
+    --shadow-elegant: 0 30px 80px -20px hsl(244 75% 30% / 0.5);
+
+    /* Motion */
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 235 40% 7%;
+    --sidebar-foreground: 230 25% 90%;
+    --sidebar-primary: 244 75% 60%;
+    --sidebar-primary-foreground: 230 30% 98%;
+    --sidebar-accent: 235 35% 14%;
+    --sidebar-accent-foreground: 230 25% 92%;
+    --sidebar-border: 235 30% 16%;
+    --sidebar-ring: 244 75% 60%;
+  }
+
+  .dark {
+    --background: 240 50% 3%;
+    --foreground: 230 30% 96%;
+  }
+
+
+  .light {
+    /* Light Midnight Indigo — same brand, inverted surfaces */
+    --background: 235 45% 96%;
+    --foreground: 240 47% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 47% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 47% 8%;
+
+    --primary: 244 70% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 250 85% 60%;
+
+    --secondary: 235 30% 90%;
+    --secondary-foreground: 240 47% 12%;
+
+    --muted: 235 28% 88%;
+    --muted-foreground: 235 20% 28%;
+
+    --accent: 250 75% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 235 30% 72%;
+    --input: 235 25% 82%;
+    --ring: 244 80% 38%;
+
+
+    --gradient-primary: linear-gradient(135deg, hsl(244 70% 48%), hsl(265 75% 55%));
+    --gradient-aurora: radial-gradient(ellipse at top, hsl(244 75% 60% / 0.18), transparent 60%),
+                       radial-gradient(ellipse at bottom right, hsl(265 85% 65% / 0.12), transparent 55%),
+                       radial-gradient(ellipse at bottom left, hsl(220 80% 50% / 0.1), transparent 50%);
+    --gradient-text: linear-gradient(135deg, hsl(240 47% 10%), hsl(244 70% 38%));
+    --gradient-mesh: conic-gradient(from 180deg at 50% 50%, hsl(244 70% 48%), hsl(265 75% 55%), hsl(220 70% 45%), hsl(244 70% 48%));
+
+    --shadow-glow: 0 0 60px hsl(244 75% 60% / 0.25);
+    --shadow-card: 0 20px 60px -15px hsl(240 50% 60% / 0.18), 0 0 0 1px hsl(235 25% 88%);
+    --shadow-elegant: 0 30px 80px -20px hsl(244 75% 50% / 0.25);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 47% 12%;
+    --sidebar-primary: 244 70% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 235 30% 94%;
+    --sidebar-accent-foreground: 240 47% 12%;
+    --sidebar-border: 235 25% 82%;
+    --sidebar-ring: 244 70% 48%;
   }
 }
 
 @layer base {
-  body {
-    @apply dark:bg-black bg-white text-blue-700 dark:text-yellow-400 w-screen overflow-x-hidden;
+  * {
+    @apply border-border;
   }
 
-  .title {
-    @apply relative text-3xl font-extrabold leading-tight text-gray-950 dark:text-white w-min mb-10;
+  /* Remove default outlines only when we render our own focus-visible ring */
+  :focus { outline: none; }
+
+  /* Strong, theme-aware focus indicator that meets WCAG 2.4.7 + 1.4.11 (≥3:1).
+     Uses a 2px solid outline plus a 4px translucent halo for visibility on
+     any background, in both light and dark themes. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px hsl(var(--ring) / 0.35);
+    border-radius: var(--radius-sm, 0.5rem);
   }
 
-  .blue-shade {
-    @apply bg-gradient-to-br from-indigo-800 from-20% to-blue-400 to-80%;
+  /* Inputs and form controls keep the ring tight to the field edge */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-offset: 0;
+    box-shadow: 0 0 0 3px hsl(var(--ring) / 0.45);
   }
-
-  .yellow-shade {
-    @apply bg-gradient-to-br from-yellow-600 from-10% to-yellow-300 to-80%;
-  }
-
-  .section-title {
-    @apply relative text-4xl font-extrabold leading-tight text-gray-950 dark:text-white w-min mb-5;
-    @apply before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-1 before:bg-blue-700 dark:before:bg-yellow-400;
-  }
-
-  .section-desc {
-    @apply text-lg font-semibold text-black dark:text-gray-400 text-justify leading-tight tracking-tight;
-  }
-
-  .section-subtitle {
-    @apply text-2xl font-semibold text-gray-950 dark:text-white mb-5;
-  }
-
-  .lexend {
-    font-family: var(--font-lexend);
-  }
-
-  .roboto {
-    font-family: var(--font-roboto);
-  }
-}
-
-@keyframes bottomUpAnimation {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 0;
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
-  }
-  10% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  25% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  30% {
-    opacity: 0;
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
-  }
-
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.animated-role span {
-  display: block;
-  opacity: 0;
-  -webkit-animation: bottomUpAnimation 6s ease-in-out infinite;
-  animation: bottomUpAnimation 6s ease-in-out infinite;
-}
-
-.animated-role span:nth-child(1) {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-
-.animated-role span:nth-child(2) {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-.animated-role span:nth-child(3) {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-}
-
-.timeline {
-  height: 20rem;
-}
-
-@media screen and (max-width: 1024px) {
-  .timeline {
-    height: auto;
-  }
-}
-
-html {
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: rgb(36, 21, 250) black;
-}
-
-html.dark {
-  scrollbar-color: rgb(250, 204, 21) white;
-}
-
-@media screen and (max-width: 768px) {
   html {
-    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Manrope', system-ui, sans-serif;
+    background-image: var(--gradient-aurora);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Sora', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.4);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.7);
   }
 }
 
-@keyframes overBorder1 {
-  0% {
-    left: 100%;
-    transform: translateX(-100%);
+@layer components {
+  .glass {
+    background:
+      linear-gradient(135deg, hsl(var(--card) / 0.85), hsl(var(--card) / 0.55));
+    @apply backdrop-blur-xl border border-border/70 shadow-card;
   }
-  50% {
-    left: 0;
-    top: 0;
-    transform: translateX(0);
+
+  .glass-strong {
+    background:
+      linear-gradient(135deg, hsl(var(--card) / 0.95), hsl(var(--card) / 0.75));
+    @apply backdrop-blur-2xl border border-border/80 shadow-elegant;
   }
-  100% {
-    top: 100%;
-    transform: translateY(-100%);
+
+
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s var(--transition-smooth), transform 0.9s var(--transition-smooth);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .marquee {
+    animation: marquee 40s linear infinite;
   }
 }
 
-@keyframes overBorder2 {
-  0% {
-    right: 100%;
-    transform: translateX(100%);
-  }
-  50% {
-    right: 0;
-    bottom: 0;
-    transform: translateX(0);
-  }
-  100% {
-    bottom: 100%;
-    transform: translateY(100%);
+@layer utilities {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
 }
 
-.circle:nth-child(1) {
-  animation: overBorder1 3s infinite;
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-.circle:nth-child(2) {
-  animation: overBorder2 3s infinite;
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(3deg); }
 }
 
-.project-container .overlay {
-  opacity: 0;
-  height: 0;
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
 }
 
-.project-container:hover .overlay {
-  opacity: 1;
-  height: 100%;
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─── AI Prathamesh OS — Terminal Styles ─────────────────────────────────── */
+
+/* Terminal cursor blink */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* CRT flicker — subtle opacity pulse */
+@keyframes crt-flicker {
+  0%, 89%, 91%, 93%, 100% { opacity: 1; }
+  90%, 92% { opacity: 0.92; }
+}
+
+/* Scanline scrolling */
+@keyframes scanline-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(6px); }
+}
+
+/* Achievement pop */
+@keyframes achievement-pop {
+  0% { transform: scale(0.8) translateX(60px); opacity: 0; }
+  60% { transform: scale(1.05) translateX(-4px); opacity: 1; }
+  100% { transform: scale(1) translateX(0); opacity: 1; }
+}
+
+/* Terminal overlay CRT scanline helper */
+.terminal-scanlines::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.13) 0px,
+    rgba(0, 0, 0, 0.13) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  animation: scanline-scroll 0.1s linear infinite;
+}
+
+/* Floating terminal button glow pulse */
+@keyframes terminal-btn-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(0, 255, 65, 0.15); }
+  50% { box-shadow: 0 0 24px rgba(0, 255, 65, 0.35); }
+}
+
+.terminal-fab {
+  animation: terminal-btn-pulse 3s ease-in-out infinite;
 }
