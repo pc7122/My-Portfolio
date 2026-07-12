@@ -17,12 +17,24 @@ export default function Home() {
       <Hero />
       <Marquee />
       <About />
-      <Experience />
-      <Work />
-      <Skills />
-      <Mobile />
-      <Photography />
-      <Contact />
+      <div className="content-visibility-auto">
+        <Experience />
+      </div>
+      <div className="content-visibility-auto">
+        <Work />
+      </div>
+      <div className="content-visibility-auto">
+        <Skills />
+      </div>
+      <div className="content-visibility-auto">
+        <Mobile />
+      </div>
+      <div className="content-visibility-auto">
+        <Photography />
+      </div>
+      <div className="content-visibility-auto">
+        <Contact />
+      </div>
       {/* AI Prathamesh OS — Hidden Terminal Experience */}
       <TerminalOverlay />
     </main>

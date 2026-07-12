@@ -113,6 +113,7 @@ export const Hero = () => {
                   width={1536}
                   height={1536}
                   className="w-full h-full object-cover"
+                  priority
                 />
               </div>
               {/* Floating badge */}
